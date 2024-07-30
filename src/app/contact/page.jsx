@@ -88,19 +88,19 @@ const Contact = () => {
           { question: message[questionIndex]?.question, answer: response },
         ]);
         if (message.length - 2 == questionIndex) {
-          // axios
-          //   .post("/api/query", {
-          //     data: [
-          //       ...answers,
-          //       {
-          //         question: message[questionIndex]?.question,
-          //         answer: response,
-          //       },
-          //     ],
-          //   })
-          //   .then((res) => {
-          //     console.log(res.data);
-          //   });
+          axios
+            .post("https://animatedportfoliobackend.onrender.com/", {
+              data: [
+                ...answers,
+                {
+                  question: message[questionIndex]?.question,
+                  answer: response,
+                },
+              ],
+            })
+            .then((res) => {
+              // console.log(res.data);
+            });
         }
         setResponse("");
         setQuestionIndex(questionIndex + 1);

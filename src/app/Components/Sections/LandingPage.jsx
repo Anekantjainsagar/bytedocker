@@ -125,7 +125,7 @@ const LandingPage = ({ location }) => {
             cnt={0}
             onClick={(e) => {
               window.open(
-                "https://drive.google.com/file/d/1vJW6ZVb9eN2ScTW8e_ZS9awnmJ-H5rUS/view?usp=sharing"
+                "https://drive.google.com/file/d/1PM6hbptgtiSEyWJnjcNyj_iLNKcIC-Jh/view?usp=sharing"
               );
             }}
           />

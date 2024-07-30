@@ -29,7 +29,9 @@ const LiveButtons = ({ data, buttonsGrid }) => {
             text="Github"
             cnt={6}
             onClick={(e) => {
-              window.open(data?.url);
+              data?.github.map((e) => {
+                window.open(e);
+              });
             }}
           />
         </div>
@@ -44,7 +46,7 @@ const LiveButtons = ({ data, buttonsGrid }) => {
             text="Linkedin"
             cnt={7}
             onClick={(e) => {
-              window.open(data?.url);
+              window.open(data?.linkedin);
             }}
           />
         </div>

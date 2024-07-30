@@ -26,7 +26,7 @@ const Contact = () => {
       question: "What is your email?",
     },
     {
-      question: "What is your mobile?",
+      question: "What is your mobile number?",
     },
     {
       question: "Any Queries..?",

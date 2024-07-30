@@ -261,13 +261,19 @@ const Projects = () => {
           </div>
           <div className="w-full mt-5 md:mt-[5vw] text-textGrey">
             <h1 className="text-2xl font-semibold" ref={overviewHeading}>
-              {data?.overview}
+              {data?.overview} ({data?.year})
             </h1>
             <p
               className="mt-1 text-lg md:text-xl text-gray-500 px-1"
               ref={description}
             >
               {formattedDescription}
+            </p>
+            <p
+              className="mt-1 text-lg md:text-xl text-gray-500 font-semibold px-1"
+              ref={description}
+            >
+              Time took for completion {data?.time}
             </p>
             <div
               id="iconsProject"

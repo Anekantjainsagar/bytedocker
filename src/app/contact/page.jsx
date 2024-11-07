@@ -140,7 +140,7 @@ const Contact = () => {
               id="emailContact"
               className="px-4 border md:flex hidden items-center justify-center h-full border-textGrey rounded-t-md text-textGrey font-semibold border-b-0 w-fit"
             >
-              anekantjainsagar@gmail.com
+              bytedocker@gmail.com
             </p>
             <div
               id="socialContact"

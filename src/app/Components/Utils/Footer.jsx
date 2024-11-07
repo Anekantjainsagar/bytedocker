@@ -327,7 +327,7 @@ const Footer = () => {
             <div className="w-9/12 mb-2 md:hidden">
               <SocialMedia />
             </div>
-            {["anekantjainsagar@gmail.com", "+91 76920 45606"].map((e, i) => {
+            {["bytedocker@gmail.com", "+91 81970 26959"].map((e, i) => {
               return <PersonalInfo data={e} key={i} />;
             })}
           </div>

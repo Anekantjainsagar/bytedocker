@@ -16,9 +16,8 @@ const Navbar = () => {
   const history = useNavigate();
   let threshold = 10;
   let routes = [
-    { name: "Projects", route: "/projects" },
-    { name: "Experience", route: "/experience" },
-    { name: "Hackathons", route: "/hackathons" },
+    { name: "Services", route: "/projects" },
+    { name: "Clients", route: "/experience" },
     { name: "About", route: "/about" },
     { name: "Contact", route: "/contact" },
   ];
@@ -192,19 +191,17 @@ const Navbar = () => {
           id="logoBox"
           className="px-4 md:px-12 py-3"
         >
-          <img
-            src={navColor ? "/logo-white.png" : "/logo.png"}
-            alt="Logo"
+          <h1
             id="logo"
-            width={1000}
-            priority={true}
-            height={1000}
-            className="w-[25vw] md:w-[8vw] cursor-pointer"
             onClick={() => {
               animatePageOut("/", history, "Home");
-              // history("/");
             }}
-          />
+            className={`text-3xl ${
+              navColor ? "text-white" : "text-black"
+            } font-semibold montserrat_font`}
+          >
+            BYTEDOCKER
+          </h1>
         </div>
         <div id="routes" className="hidden md:flex items-center text-lg h-full">
           {routes?.map((e, i) => {

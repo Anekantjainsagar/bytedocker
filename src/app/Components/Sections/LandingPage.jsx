@@ -3,8 +3,11 @@ import React, { useContext, useEffect } from "react";
 import { IoIosArrowRoundDown } from "react-icons/io";
 import BallAnimation from "../Animations/BallAnimation";
 import Context from "../../../Context/Context";
+import { useNavigate } from "react-router-dom";
+import { animatePageOut } from "../Utils/Page-transitions";
 
 const LandingPage = ({ location }) => {
+  const history = useNavigate();
   const { tl, headingRightScroll, width } = useContext(Context);
   useEffect(() => {
     headingRightScroll();
@@ -66,7 +69,7 @@ const LandingPage = ({ location }) => {
       data-scroll-section
       className="h-[90vh] md:h-[100vh] relative bg-darkGrey overflow-hidden Landingpage"
     >
-      <img
+      {/* <img
         src={"/data/bg2.png"}
         width={10000}
         height={10000}
@@ -74,7 +77,7 @@ const LandingPage = ({ location }) => {
         priority={true}
         id="mainBg"
         className="w-full h-full bottom-0 relative z-20 pt-[8vh] object-contain object-bottom bg2"
-      />
+      /> */}
       <div className="px-[4vw] w-full h-[90vh] z-30 absolute top-0 left-0 flex items-start md:items-center justify-between">
         <div className="text-white md:block hidden">
           <IoIosArrowRoundDown
@@ -83,11 +86,11 @@ const LandingPage = ({ location }) => {
           />
           <div>
             {[
-              "MERN Stack Web Developer",
-              "Approaching 2 Years of Experience",
-              "Experienced 8+ Startups",
-              "Passionate Data Science Learner",
-              "SIH 2023 Hackathon Winner",
+              "Custom ERP ",
+              "Custom CRM",
+              "Channel partner management tool",
+              "Business automation ",
+              "Web and app development",
             ].map((e) => {
               return (
                 <p
@@ -121,12 +124,10 @@ const LandingPage = ({ location }) => {
             ballSize={
               "w-[23vw] md:w-[8vw] h-[23vw] md:h-[8vw] md:text-2xl font-semibold"
             }
-            text="Resume"
+            text="Contact Us"
             cnt={0}
             onClick={(e) => {
-              window.open(
-                "https://drive.google.com/file/d/1PM6hbptgtiSEyWJnjcNyj_iLNKcIC-Jh/view?usp=sharing"
-              );
+              animatePageOut("/contact", history, "Contact Us");
             }}
           />
         </div>
@@ -139,7 +140,7 @@ const LandingPage = ({ location }) => {
           id="nameBoxHeading"
           className="text-[30vw] md:text-[15vw] font-semibold text-white lg:text-white/80 pl-5 md:pl-20 bg2"
         >
-          - Anekant Jain
+          - Byte Docker
         </h1>
       </div>
     </div>

@@ -67,7 +67,7 @@ const SocialMedia = ({ color }) => {
       <AiFillMail
         onClick={(e) => {
           e.preventDefault();
-          window.open("mailto:anekantjainsagar@gmail.com");
+          window.open("mailto:bytedocker@gmail.com");
         }}
         className={`md:mr-4 mr-3 bg-textGrey md:p-2 p-1.5 rounded-full cursor-pointer ${
           color === "grey" ? "greyHover" : "oceanHover"

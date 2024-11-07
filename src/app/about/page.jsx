@@ -301,7 +301,7 @@ const About = () => {
             and in others we are the part of top 10 teams. <br /> If you want to
             talk, hit me up or just contact me at:
             <div className="mt-[5vw] md:mt-5 flex-col items-start aboutLast">
-              {["anekantjainsagar@gmail.com", "+91 76920 45606"].map((e, i) => {
+              {["bytedocker@gmail.com", "+91 81970 26959"].map((e, i) => {
                 return <PersonalInfo data={e} key={i} type={"about"} />;
               })}
             </div>

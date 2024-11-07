@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from "react";
 import Context from "../../Context/Context";
-import useLocoScroll from "../scrollConfig";
 import Footer from "../Components/Utils/Footer";
 import gsap from "gsap";
 import { useLocation } from "react-router-dom";
@@ -58,7 +57,7 @@ const Experience = () => {
         height: "0px",
       },
       {
-        height: "1700px",
+        height: "900px",
         zIndex: 0,
         duration: 3,
         ease: "none",
@@ -112,11 +111,9 @@ const Experience = () => {
           id="expIdText"
           className="h1-text text-textGrey px-5 md:px-[12vw] md:w-10/12"
         >
-          {"Transforming Expertise into Impactful Journeys"
-            .split("")
-            .map((e, i) => {
-              return <span key={i}>{e}</span>;
-            })}
+          {"Our Methods of Operations".split("").map((e, i) => {
+            return <span key={i}>{e}</span>;
+          })}
         </h1>
         <div className="mainLineExpertise h-[1px] mx-5 md:mx-[12vw] mx-auto bg-gray-400/50 mt-5 md:mt-16"></div>
         <div className="flex flex-col justify-center overflow-x-hidden">

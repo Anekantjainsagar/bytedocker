@@ -151,7 +151,7 @@ const Contact = () => {
                 }}
                 className={`text-2xl md:text-3xl mx-1.5 md:mx-2 rounded-full cursor-pointer`}
               />
-             
+
               <AiFillInstagram
                 onClick={(e) => {
                   e.preventDefault();
@@ -204,7 +204,7 @@ const Contact = () => {
                   {started ? (
                     <>
                       {[
-                        { question: "Welcome to My Portfolio Website 😊" },
+                        { question: "Welcome to Bytedocker 😊" },
                         {
                           question:
                             "I hope you're having a fantastic day! 🔥🔥",

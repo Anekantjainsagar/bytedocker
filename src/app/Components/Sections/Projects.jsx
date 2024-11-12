@@ -58,19 +58,19 @@ const Projects = () => {
       id="projectContainer"
       className="py-[8vw] md:py-[2vw] flex flex-col items-center px-5 md:px-[10vw]"
     >
-      {projects
-        .slice(10)
-        .reverse()
-        ?.map((e, i) => {
-          return (
-            <div key={i} id={"projectIdBlock"} className="w-full">
-              <Block data={e} key={i} index={i} total={projects?.length} />
-            </div>
-          );
-        })}
+      <h1 className="text-5xl text-newBlue font-semibold text-start w-[76vw] mb-10">
+        Our Services
+      </h1>
+      {projects?.map((e, i) => {
+        return (
+          <div key={i} id={"projectIdBlock"} className="w-full">
+            <Block data={e} key={i} index={i} total={projects?.length} />
+          </div>
+        );
+      })}
       <div className="mt-4 md:mt-10" id="moreWork">
         <TopbarBlock
-          e={"More work"}
+          e={"Explore"}
           onClick={() => {
             animatePageOut("/projects", history, "Projects");
           }}

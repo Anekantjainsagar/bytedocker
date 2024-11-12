@@ -174,11 +174,9 @@ const About = () => {
           id="projectId"
           className="h1-text text-textGrey px-5 md:px-[12vw] md:w-10/12"
         >
-          {"Helping brands thrive in the digital world"
-            .split("")
-            .map((e, i) => {
-              return <span key={i}>{e}</span>;
-            })}
+          {"Helping Brands Succeed Digitally".split("").map((e, i) => {
+            return <span key={i}>{e}</span>;
+          })}
         </h1>
         <div className="mainLine h-[1px] mx-5 md:mx-[12vw] mx-auto bg-gray-400/50 mt-5 md:mt-16"></div>
         <div className="px-5 md:px-[12.5vw] mx-auto flex md:flex-row flex-col-reverse md:my-0 my-5 items-start justify-between">
@@ -193,13 +191,21 @@ const About = () => {
             />
             <h1
               id="mainAbout"
-              className="w-10/12 md:w-8/12 text-textGrey text-base md:text-xl font-[400]"
+              className="w-10/12 md:w-8/12 text-textGrey text-xl md:text-3xl font-[400]"
             >
-              I help companies with each project to make their online presence,
-              I push my work to new horizons, always putting quality first.
+              Welcome to Bytedocker, your trusted technology partner dedicated
+              to transforming businesses through powerful digital solutions. We
+              specialize in designing and developing ERP and CRM systems,
+              creating seamless e-commerce platforms, and crafting customized
+              applications for clients across various industries. At Bytedocker,
+              innovation meets execution to deliver results that drive growth,
+              efficiency, and customer satisfaction.
               <br />
               <br />
-              <span className="text-gray-400">Always Learning...</span>
+              Our team is passionate about solving complex challenges with
+              user-centered designs and scalable solutions. With active clients,
+              committed interns, and partnerships with emerging brands, we
+              continue to expand our reach and capabilities.
             </h1>
           </div>
           <img
@@ -216,29 +222,28 @@ const About = () => {
             className="text-3xl md:text-5xl md:leading-[55px] text-textGrey md:w-8/12"
             id="mainHeading"
           >
-            I can help you with ...
+            Mission
           </h1>
-          <div className="grid md:grid-cols-3 items-start gap-x-[5vw] mt-10">
-            {[
-              {
-                icon: <CgWebsite />,
-                title: "Web Development",
-                text: "I create beautiful and interactive websites using GSAP for animations and the MERN Stack for functionality. My goal is to build websites that are not only visually appealing but also highly functional, providing a seamless user experience.",
-              },
-              {
-                icon: <GiArtificialIntelligence />,
-                title: "Artificial Intelligence",
-                text: "I build machine learning models that help in making predictions, recommendations, and gaining insights from data. By analyzing data, I help businesses make better decisions and understand their operations more deeply.",
-              },
-              {
-                icon: <BiLogoAws />,
-                title: "Deployment",
-                text: "I deploy websites and machine learning models to the cloud, ensuring they run smoothly, reliably, and can handle lots of users. My deployment solutions are secure and efficient, bringing your projects to life on the web.",
-              },
-            ].map((e, i) => {
-              return <Block key={i} data={e} id={i + 1} />;
-            })}
-          </div>
+          <p className="text-xl">
+            Our Mission To deliver high-quality, affordable technology solutions
+            that address our client&apos;s unique needs, combining technical
+            expertise with a deep understanding of industry trends to create
+            products that are both functional and future-ready. By nurturing
+            talent and fostering innovation, we aim to be a catalyst for digital
+            transformation across industries.
+          </p>
+          <h1
+            className="text-3xl md:text-5xl mt-5 md:leading-[55px] text-textGrey md:w-8/12"
+            id="mainHeading"
+          >
+            Vision
+          </h1>
+          <p className="text-xl">
+            Our Vision To be the premier technology partner for businesses
+            worldwide, empowering them to achieve operational excellence and
+            expand their digital presence through cutting-edge solutions that
+            inspire growth and innovation.
+          </p>
         </div>
       </div>
       <div
@@ -280,49 +285,26 @@ const About = () => {
           >
             <FaLaptopCode />
           </div>
-          <h1 className="text-3xl md:text-5xl md:leading-[55px] md:mt-6 md:mb-6 mt-4 mb-2 text-textGrey w-full md:w-8/12 aboutLast">
-            Full Stack Developer & ML Engineer
-          </h1>
-          <div className="text-textGrey md:text-xl md:w-9/12 aboutLast">
-            Hi, I am Anekant Jain a Final-year undergraduate Computer Science
-            Engineering student from SATI Vidisha (M.P). <br /> I have good
-            hands-on experience in Full Stack Web Development technologies such
-            as{" "}
-            <span className="mr-2 text-newBlue">
-              Next.js, React.js, Node.js, Express.js, MongoDb (MERN Stack) &
-              Machine Learning technologies such as Numpy, Pandas, Matplotlib
-              and it&apos;s various algorithms.
-            </span>
-            I have participated in 10+ Offline Web Development and Ai Hackathons
-            out of which in{" "}
-            <span className="text-newBlue">
-              Kriyeta 2023 & SIH 2023 I became the winner
-            </span>{" "}
-            and in others we are the part of top 10 teams. <br /> If you want to
-            talk, hit me up or just contact me at:
-            <div className="mt-[5vw] md:mt-5 flex-col items-start aboutLast">
-              {["bytedocker@gmail.com", "+91 81970 26959"].map((e, i) => {
-                return <PersonalInfo data={e} key={i} type={"about"} />;
+          <div className="text-textGrey md:text-xl md:w-9/12 aboutLast mt-5">
+            <div className="mt-[5vw] md:mt-7 flex-col items-start aboutLast gap-y-5">
+              {[
+                "Corporate office 1: Residency Road, Bengaluru 560025",
+                "Corporate office 2: Bull Temple Road, Basavanagudi, Bengaluru 560019",
+                "Registered Office: Kanakapura Road, Bengaluru 560062",
+                "+91 99809 36762",
+                "management@bytedocker.com",
+              ].map((e, i) => {
+                return (
+                  <div key={i} className="mb-7">
+                    <PersonalInfo data={e} type={"about"} />
+                  </div>
+                );
               })}
             </div>
           </div>
         </div>
       </div>
       <Footer />
-    </div>
-  );
-};
-
-const Block = ({ data, id }) => {
-  return (
-    <div className="mb-6 md:mb-5" id="aboutBlock">
-      <p className="md:text-xl text-gray-500">0{id}</p>
-      <div className="line h-[1px] w-full bg-gray-400/50 my-2 md:my-2"></div>
-      <h1 className="text-textGrey text-xl md:text-3xl my-1 md:my-4 font-[400] flex items-center">
-        {data?.icon}
-        <span className="ml-2">{data?.title}</span>
-      </h1>
-      <p className="md:text-lg font-[400] text-textGrey">{data?.text}</p>
     </div>
   );
 };

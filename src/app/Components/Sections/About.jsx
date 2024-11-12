@@ -87,36 +87,18 @@ const About = () => {
     >
       <div className="flex md:flex-row flex-col items-start justify-between">
         <h1
-          className="w-full md:w-8/12 md:block hidden text-xl md:text-4xl md:leading-[50px]"
+          className="w-full md:w-7/12 md:block hidden text-xl md:text-4xl md:leading-[50px]"
           id="leftAboutSection"
         >
-          {"Skilled Full Stack Developer, SDE 1 at consciousleap, Intern at ProwizAnalytics, Freelancer at Trubuddies, Having 2 Years of Experience, Learning Machine Learning."
-            .split(" ")
+          {"Welcome to Bytedocker, your trusted technology partner dedicated to transforming businesses through powerful digital solutions. "
+            .split("")
             .map((word, i) => {
               switch (word) {
-                case "consciousleap,":
-                  return (
-                    <Block
-                      key={i}
-                      word={word}
-                      link={"https://consciousleap.co"}
-                    />
-                  );
-                case "ProwizAnalytics,":
-                  return (
-                    <Block key={i} word={word} link={"https://prowiz.io/"} />
-                  );
-                case "Trubuddies,":
-                  return (
-                    <Block
-                      key={i}
-                      word={word}
-                      link={"https://trubuddies.com"}
-                    />
-                  );
+                case "Bytedocker,":
+                  return <Block key={i} word={word} />;
                 default:
                   return (
-                    <span key={i} className="mr-2">
+                    <span key={i} className="">
                       {word}
                     </span>
                   );
@@ -160,8 +142,8 @@ const About = () => {
           className="w-full md:text-base text-sm md:mt-0 mt-1 md:w-3/12"
           id="rightAboutSection"
         >
-          The combination of my passion for design, code & interaction positions
-          me in a unique place in the web design world.
+          Our passion for design, coding, and interactive experiences uniquely
+          positions us in the web development landscape.
         </p>
       </div>
       <div
@@ -200,20 +182,9 @@ const Block = ({ word, link }) => {
           border: "1px solid #000",
         });
       }}
-      onClick={(e) => {
-        window.open(link);
-      }}
       className="text-newBlue mr-2 break-words cursor-pointer relative z-40"
     >
-      {word == "ProwizAnalytics," ? (
-        <>
-          <span className="mr-2">Prowiz</span>
-          <span>Analytics</span>
-        </>
-      ) : (
-        word.slice(0, word?.length - 1)
-      )}
-      ,
+      {word.slice(0, word?.length - 1)},
     </span>
   );
 };

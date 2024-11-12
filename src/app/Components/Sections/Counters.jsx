@@ -7,11 +7,11 @@ import Context from "../../../Context/Context";
 const Counters = () => {
   gsap.registerPlugin(ScrollTrigger);
   let data = [
-    { title: "Projects Completed", value: 15 },
-    { title: "Coding Days", value: 750 },
-    { title: "Awards Received", value: 4 },
-    { title: "Coffee Cups", value: 500 },
-    { title: "Sleepless Nights", value: 100 },
+    { title: "Successful Projects", value: 30 },
+    { title: "Active Clients", value: 7 },
+    { title: "Tech Stacks", value: 25 },
+    { title: "Industries", value: 5 },
+    { title: "Skilled Professionals", value: 20 },
   ];
 
   return (

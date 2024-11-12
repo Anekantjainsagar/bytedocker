@@ -1,11 +1,9 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import Context from "../../Context/Context";
-import useLocoScroll from "../scrollConfig";
 import Footer from "../Components/Utils/Footer";
 import gsap from "gsap";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import projects from "../data/projects";
-import LiveButtons from "./LiveButtons";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { animatePageOut } from "../Components/Utils/Page-transitions";
 import LaptopView from "./LaptopView";
@@ -17,8 +15,6 @@ const Projects = () => {
   const [projectIndex, setProjectIndex] = useState(0);
   const [data, setData] = useState();
   const timeline = gsap.timeline();
-  // useLocoScroll(true, context?.handleScroll);
-  const [buttonsGrid, setButtonsGrid] = useState(0);
   const location = useLocation();
 
   const overviewHeading = useRef(null);
@@ -27,25 +23,14 @@ const Projects = () => {
 
   useEffect(() => {
     let temp = projects?.filter(
-      (e) => e?.name?.toLowerCase().replaceAll(" ", "-") === id
+      (e) => e?.title?.toLowerCase().replaceAll(" ", "-") === id
     )[0];
     setProjectIndex(
       projects?.findIndex(
-        (e) => e?.name?.toLowerCase().replaceAll(" ", "-") === id
+        (e) => e?.title?.toLowerCase().replaceAll(" ", "-") === id
       )
     );
     setData(temp);
-    let cnt = 0;
-    if (temp?.url) {
-      cnt++;
-    }
-    if (temp?.github?.length > 0) {
-      cnt++;
-    }
-    if (temp?.linkedin) {
-      cnt++;
-    }
-    setButtonsGrid(cnt);
   }, [id, location]);
 
   useEffect(() => {
@@ -230,13 +215,6 @@ const Projects = () => {
     ScrollTrigger.refresh();
   }, [id]);
 
-  const formattedDescription = data?.desc.split("\n").map((line, index) => (
-    <React.Fragment key={index}>
-      {line}
-      <br />
-    </React.Fragment>
-  ));
-
   return (
     <div
       data-scroll-container
@@ -245,9 +223,9 @@ const Projects = () => {
       <div className="w-full mt-[25vw] md:mt-[8vw]" data-scroll-section>
         <h1
           id="projectIdIndividual"
-          className="h1-text text-textGrey px-5 md:px-[12vw] md:w-10/12"
+          className="text-6xl leading-[70px] text-textGrey px-5 md:px-[12vw] md:w-10/12"
         >
-          {data?.name?.split("").map((e, i) => {
+          {data?.title?.split("").map((e, i) => {
             return <span key={i}>{e}</span>;
           })}
         </h1>
@@ -259,22 +237,51 @@ const Projects = () => {
               <MobileView data={data} />
             </div>
           </div>
-          <div className="w-full mt-5 md:mt-[5vw] text-textGrey">
-            <h1 className="text-2xl font-semibold" ref={overviewHeading}>
-              {data?.overview} ({data?.year})
-            </h1>
-            <p
-              className="mt-1 text-lg md:text-xl text-gray-500 px-1"
-              ref={description}
-            >
-              {formattedDescription}
-            </p>
-            <p
-              className="mt-1 text-lg md:text-xl text-gray-500 font-semibold px-1"
-              ref={description}
-            >
-              Time took for completion {data?.time}
-            </p>
+          <div className="w-full mt-5 md:mt-[2vw] text-textGrey">
+            {data?.desc?.map((e, i) => {
+              const [title, description] = e.split(":");
+              return (
+                <p key={i} className="text-xl mb-1.5">
+                  <strong>{title}:</strong>
+                  {description}
+                </p>
+              );
+            })}
+
+            {/* {data?.title &&
+              Object.keys(data)?.map((e, i) => {
+                return (
+                  e != "title" && (
+                    <div
+                      key={i}
+                      className="mt-1 w-full text-lg md:text-xl text-gray-500 px-1"
+                    >
+                      <p className="text-black font-medium">
+                        {e
+                          .split("_")
+                          .map(
+                            (word) =>
+                              word.charAt(0).toUpperCase() + word.slice(1)
+                          )
+                          .join(" ")}
+                      </p>
+                      {Array.isArray(data[e]) ? (
+                        <div>
+                          {data[e]?.map((item, i) => {
+                            return (
+                              <p key={i} className="text-start w-7/12 mx-start">
+                                {i + 1}. {item}
+                              </p>
+                            );
+                          })}
+                        </div>
+                      ) : (
+                        <p className="w-7/12 mx-start  text-start">{data[e]}</p>
+                      )}
+                    </div>
+                  )
+                );
+              })} */}
             <div
               id="iconsProject"
               className="text-textGrey mt-4 md:mb-0 mb-4 md:mt-5 flex items-start flex-wrap"
@@ -286,7 +293,6 @@ const Projects = () => {
             <LaptopView data={data?.img} />
             <MobileView data={data} />
           </div>
-          <LiveButtons data={data} buttonsGrid={buttonsGrid} />
         </div>
         <BottomBlock idx={projectIndex} />
       </div>
@@ -322,6 +328,9 @@ const Icons = ({ data, elementsRef }) => {
     { title: "c", img: "/data/icons/letter-c.png" },
     { title: "c++", img: "/data/icons/c++.png" },
     { title: "firebase", img: "/data/icons/firebase.png" },
+    { title: "angular", img: "/data/icons/angular.png" },
+    { title: "rust", img: "/data/icons/rust.png" },
+    { title: "ruby", img: "/data/icons/ruby.png" },
     {
       title: "machine learning",
       img: "/data/icons/ml.png",
@@ -395,20 +404,20 @@ const BottomBlock = ({ idx }) => {
           onClick={(e) => {
             let temp_id = "";
             if (idx === projects?.length - 1) {
-              temp_id = projects[0]?.name?.toLowerCase()?.replaceAll(" ", "-");
+              temp_id = projects[0]?.title?.toLowerCase()?.replaceAll(" ", "-");
               animatePageOut(
                 `/projects/${temp_id}`,
                 history,
-                projects[0]?.name
+                projects[0]?.title
               );
             } else {
-              temp_id = projects[idx + 1]?.name
+              temp_id = projects[idx + 1]?.title
                 ?.toLowerCase()
                 ?.replaceAll(" ", "-");
               animatePageOut(
                 `/projects/${temp_id}`,
                 history,
-                projects[idx + 1]?.name
+                projects[idx + 1]?.title
               );
             }
           }}
@@ -427,22 +436,22 @@ const BottomBlock = ({ idx }) => {
           onClick={(e) => {
             let temp_id = "";
             if (idx === 0) {
-              temp_id = projects[projects?.length - 1]?.name
+              temp_id = projects[projects?.length - 1]?.title
                 ?.toLowerCase()
                 ?.replaceAll(" ", "-");
               animatePageOut(
                 `/projects/${temp_id}`,
                 history,
-                projects[projects?.length - 1]?.name
+                projects[projects?.length - 1]?.title
               );
             } else {
-              temp_id = projects[idx - 1]?.name
+              temp_id = projects[idx - 1]?.title
                 ?.toLowerCase()
                 ?.replaceAll(" ", "-");
               animatePageOut(
                 `/projects/${temp_id}`,
                 history,
-                projects[idx - 1]?.name
+                projects[idx - 1]?.title
               );
             }
           }}
@@ -455,13 +464,13 @@ const BottomBlock = ({ idx }) => {
       <div className="flex items-center justify-between text-textGrey text-xl mt-2">
         <p className={`${buttonLeft ? "opacity-100" : "opacity-0"}`}>
           {idx === projects?.length - 1
-            ? projects[0]?.name
-            : projects[idx + 1]?.name}
+            ? projects[0]?.title
+            : projects[idx + 1]?.title}
         </p>
         <p className={`${buttonRight ? "opacity-100 text-end" : "opacity-0"}`}>
           {idx === 0
-            ? projects[projects?.length - 1]?.name
-            : projects[idx - 1]?.name}
+            ? projects[projects?.length - 1]?.title
+            : projects[idx - 1]?.title}
         </p>
       </div>
     </div>

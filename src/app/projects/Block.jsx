@@ -33,11 +33,7 @@ const Block = ({ data, index, total }) => {
       <div
         id={id}
         className="grid w-full md:w-[76vw] px-4 md:px-2 py-8 text-textGrey text-xs md:text-xl md:font-medium items-center cursor-pointer"
-        style={
-          width > 600
-            ? { gridTemplateColumns: "35% 25% 20% 20%" }
-            : { gridTemplateColumns: "48% 32% 20%" }
-        }
+        style={{ gridTemplateColumns: "100%" }}
         onMouseMove={(e) => {
           if (width > 600) {
             const randomNumber = Math.floor(Math.random() * colors?.length);
@@ -72,8 +68,12 @@ const Block = ({ data, index, total }) => {
           }
         }}
         onClick={(e) => {
-          let id = data?.name?.toLowerCase().replaceAll(" ", "-");
-          animatePageOut(`/projects/${id}`, history, data?.name);
+          let id = data?.title?.toLowerCase().replaceAll(" ", "-");
+          animatePageOut(
+            `/projects/${id}`,
+            history,
+            data?.title?.slice(0, 50) + "..."
+          );
           if (width > 600) {
             gsap.to(".mouse", {
               width: "25px",
@@ -88,12 +88,9 @@ const Block = ({ data, index, total }) => {
           }
         }}
       >
-        <h1 className="md:text-4xl text-lg font-semibold md:font-normal md:pr-0 pr-3">
-          {data?.name}
+        <h1 className="md:text-3xl text-lg font-semibold md:font-normal md:pr-0 pr-3">
+          {data?.title}
         </h1>
-        <p>{data?.type}</p>
-        <p className="md:block hidden">{data?.year}</p>
-        <p className="md:pl-0 pl-2">{data?.time}</p>
       </div>
       {index == total - 1 && <BigLine />}
     </div>

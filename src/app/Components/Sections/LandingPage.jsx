@@ -1,10 +1,12 @@
-import gsap from "gsap";
 import React, { useContext, useEffect } from "react";
 import { IoIosArrowRoundDown } from "react-icons/io";
 import BallAnimation from "../Animations/BallAnimation";
 import Context from "../../../Context/Context";
 import { useNavigate } from "react-router-dom";
 import { animatePageOut } from "../Utils/Page-transitions";
+import Lottie from "react-lottie-player";
+import animationData from "../../data/data.json";
+import gsap from "gsap";
 
 const LandingPage = ({ location }) => {
   const history = useNavigate();
@@ -78,6 +80,14 @@ const LandingPage = ({ location }) => {
         id="mainBg"
         className="w-full h-full bottom-0 relative z-20 pt-[8vh] object-contain object-bottom bg2"
       /> */}
+      {/* <Lottie
+        loop
+        animationData={animationData}
+        play
+        id="mainBg"
+        style={{ width: "75%" }}
+        className="absolute bottom-0 left-[13%] z-50 bg2"
+      /> */}
       <div className="px-[4vw] w-full h-[90vh] z-30 absolute top-0 left-0 flex items-start md:items-center justify-between">
         <div className="text-white md:block hidden">
           <IoIosArrowRoundDown
@@ -86,11 +96,11 @@ const LandingPage = ({ location }) => {
           />
           <div>
             {[
-              "Custom ERP ",
-              "Custom CRM",
-              "Channel partner management tool",
-              "Business automation ",
-              "Web and app development",
+              "Custom Software Development",
+              "Mobile and Web Application Development",
+              "Marketing and Sales Enablement Tools",
+              "Internally Developed SaaS Products",
+              "IT Consultation and Support",
             ].map((e) => {
               return (
                 <p
@@ -138,9 +148,9 @@ const LandingPage = ({ location }) => {
       >
         <h1
           id="nameBoxHeading"
-          className="text-[30vw] md:text-[15vw] font-semibold text-white lg:text-white/80 pl-5 md:pl-20 bg2"
+          className="text-[30vw] uppercase montserrat_font md:text-[15vw] font-semibold text-white lg:text-white/80 pl-5 md:pl-20 bg2"
         >
-          - Byte Docker
+          - Bytedocker
         </h1>
       </div>
     </div>

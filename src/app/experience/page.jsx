@@ -4,13 +4,13 @@ import Footer from "../Components/Utils/Footer";
 import gsap from "gsap";
 import { useLocation } from "react-router-dom";
 import experience from "../data/experience";
+import Line from "../Components/Utils/Line";
+import Skills from "../Components/Sections/Skills";
 
 const Experience = () => {
   const context = useContext(Context);
   const timeline = gsap.timeline();
   const location = useLocation();
-
-  // useLocoScroll(true, context?.handleScroll);
 
   const animateBox = (boxId, xStart, xEnd, startTrigger, endTrigger) => {
     gsap.fromTo(
@@ -127,7 +127,8 @@ const Experience = () => {
                 return <Card e={e} key={i} i={i + 1} />;
               })}
             </div>
-          </div>
+          </div>{" "}
+          <Skills />
         </div>
       </div>
       <Footer />

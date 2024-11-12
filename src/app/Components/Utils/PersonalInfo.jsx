@@ -7,6 +7,8 @@ const PersonalInfo = ({ data, type }) => {
     .replaceAll(" ", "")
     .replaceAll("+", "plus")
     .replaceAll(".", "dot")
+    .replaceAll(",", "coma")
+    .replaceAll(":", "colan")
     .replaceAll("@", "at");
   let idTitle = id + "title";
 

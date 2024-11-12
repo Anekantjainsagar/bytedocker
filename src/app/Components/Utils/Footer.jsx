@@ -280,22 +280,7 @@ const Footer = () => {
         <div className="w-full flex flex-col mt-[10vw] md:-mt-[1vw]">
           <div className="w-full flex items-end justify-between">
             <div className="flex flex-col items-start font-medium">
-              <div className="flex items-center">
-                <div
-                  id="mainFooterImg"
-                  ref={mainFooterImg}
-                  className="w-[16vw] md:w-[5vw] bg-darkGrey rounded-full opacity-0 aspect-square overflow-hidden pt-3"
-                >
-                  <img
-                    src={"/data/bg2.png"}
-                    alt="Anekant Jain"
-                    width={100}
-                    height={100}
-                    className="w-full scale-110 aspect-square object-cover object-top relative z-0"
-                  />
-                </div>
-                <h1 className="ml-5 md:ml-7 h1-text">Let&apos;s work</h1>
-              </div>
+              <h1 className="h1-text">Let&apos;s work</h1>
               <h1 className="md:mt-2 h1-text">together</h1>
             </div>
             <div ref={arrowFooter}>
@@ -327,15 +312,15 @@ const Footer = () => {
             <div className="w-9/12 mb-2 md:hidden">
               <SocialMedia />
             </div>
-            {["bytedocker@gmail.com", "+91 81970 26959"].map((e, i) => {
+            {["management@bytedocker.com", "+91 99809 36762"].map((e, i) => {
               return <PersonalInfo data={e} key={i} />;
             })}
           </div>
         </div>
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 mb-4 text-lg w-[80vw] flex items-center justify-between">
-          <p id="copyrightFooter" ref={copyrightFooter}>
-            Built by ©Anekantjainsagar
-          </p>
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 mb-4 text-lg w-[80vw] flex items-center justify-end">
+          {/* <p id="copyrightFooter" ref={copyrightFooter}>
+            Designed by ©Anekantjainsagar
+          </p> */}
           <div id="socialFooter" ref={socialFooter} className="md:block hidden">
             <SocialMedia />
           </div>

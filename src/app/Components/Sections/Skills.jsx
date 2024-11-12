@@ -34,22 +34,11 @@ const Skills = () => {
           scroller: ".mainApp",
         },
       });
-      gsap.to("#skillRow3", {
-        x: -moveX,
-        scrollTrigger: {
-          trigger: "#skillContainer",
-          scrub: true,
-          start,
-          end,
-          scroller: ".mainApp",
-        },
-      });
     }
   }, []);
 
   return (
     <div
-      data-scroll-section
       id="skillContainer"
       className="py-[5vw] flex flex-col items-center px-5 md:px-[10vw]"
     >
@@ -57,38 +46,32 @@ const Skills = () => {
         id="skillRow"
         className="grid grid-cols-4 md:flex items-start md:items-center justify-between flex-wrap w-full mb-8 md:translate-x-[8vw] relative z-30"
       >
-        <Icon source={"/data/icons/html.png"} title={"Html"} />
-        <Icon source={"/data/icons/css-3.png"} title={"CSS"} />
-        <Icon source={"/data/icons/bootstrap.png"} title={"Bootstrap"} />
-        <Icon source={"/data/icons/tailwind.png"} title={"Tailwind css"} />
-        <Icon source={"/data/icons/js.png"} title={"JavaScript"} />
-        <Icon source={"/data/icons/typescript.png"} title={"TypeScript"} />
-        <Icon source={"/data/icons/python.png"} title={"Python"} />
-        <Icon source={"/data/icons/numpy.svg"} title={"Numpy"} />{" "}
+        <Icon source={"/companies/tapio.png"} title={"Tapio Digital"} />{" "}
+        <Icon
+          source={"/companies/kenstone-digital.png"}
+          title={"Kenstone Capital"}
+        />
+        <Icon source={"/companies/campuswave.png"} title={"Campus Wave"} />
+        <Icon source={"/companies/claws.png"} title={"Claws"} />
+        <Icon source={"/companies/houseliv.png"} title={"House Liv"} />
+        <Icon source={"/companies/innovact.png"} title={"Innovact"} />
+        <Icon
+          source={"/companies/just-for-corporates.png"}
+          title={"Just for Corporates"}
+        />{" "}
+        <Icon source={"/companies/bms.png"} title={"BMS College"} />
         {context?.width < 600 && (
           <>
-            <Icon source={"/data/icons/pandas.svg"} title={"Pandas"} />
+            <Icon source={"/companies/kidat.png"} title={"Kidat"} />
             <Icon
-              source={"/data/icons/matplotlib-seeklogo.svg"}
-              title={"Matplotlib"}
+              source={"/companies/make-my-adventures.png"}
+              title={"Make My Adventures"}
             />
-            <Icon source={"/data/icons/react.png"} title={"React.js"} />
-            <Icon source={"/data/icons/next.png"} title={"Next.js"} />
-            <Icon source={"/data/icons/npm.png"} title={"NPM"} />
-            <Icon source={"/data/icons/gsap.svg"} title={"GSAP"} />
-            <Icon
-              source={"/data/icons/node-js-736399_1280.png"}
-              title={"Node.js"}
-            />
-            <Icon source={"/data/icons/Expressjs.png"} title={"Express.js"} />{" "}
-            <Icon source={"/data/icons/mongodb.png"} title={"MongoDB"} />
-            <Icon source={"/data/icons/sql.png"} title={"Mysql"} />
-            <Icon source={"/data/icons/git.png"} title={"Git"} />
-            <Icon source={"/data/icons/github.png"} title={"Github"} />
-            <Icon source={"/data/icons/aws.png"} title={"AWS"} />
-            <Icon source={"/data/icons/letter-c.png"} title={"C"} />
-            <Icon source={"/data/icons/c++.png"} title={"C++"} />
-            <Icon source={"/data/icons/dsa.png"} title={"DSA"} />
+            <Icon source={"/companies/meesha.png"} title={"Miesha"} />
+            <Icon source={"/companies/seenuz.png"} title={"Seenuz Conceptsz"} />
+            <Icon source={"/companies/tapio.png"} title={"Tapio Digital"} />
+            <Icon source={"/companies/white-pearl.png"} title={"White Peart"} />
+            <Icon source={"/companies/wrenberg.png"} title={"Wrenberg"} />
           </>
         )}
       </div>
@@ -96,33 +79,19 @@ const Skills = () => {
         id="skillRow2"
         className="hidden md:flex items-center justify-between w-full mb-8 md:-translate-x-[8vw] relative z-30"
       >
-        <Icon source={"/data/icons/pandas.svg"} title={"Pandas"} />
+        <Icon source={"/companies/kidat.png"} title={"Kidat"} />
         <Icon
-          source={"/data/icons/matplotlib-seeklogo.svg"}
-          title={"Matplotlib"}
+          source={"/companies/make-my-adventures.png"}
+          title={"Make My Adventures"}
         />
-        <Icon source={"/data/icons/react.png"} title={"React.js"} />
-        <Icon source={"/data/icons/next.png"} title={"Next.js"} />
-        <Icon source={"/data/icons/npm.png"} title={"NPM"} />
-        <Icon source={"/data/icons/gsap.svg"} title={"GSAP"} />
+        <Icon source={"/companies/meesha.png"} title={"Miesha"} />
+        <Icon source={"/companies/seenuz.png"} title={"Seenuz Conceptsz"} />
         <Icon
-          source={"/data/icons/node-js-736399_1280.png"}
-          title={"Node.js"}
+          source={"/companies/big-foundation.png"}
+          title={"Big Foundation"}
         />
-        <Icon source={"/data/icons/Expressjs.png"} title={"Express.js"} />
-      </div>
-      <div
-        id="skillRow3"
-        className="hidden md:flex items-center justify-between w-full md:translate-x-[8vw] relative z-30"
-      >
-        <Icon source={"/data/icons/mongodb.png"} title={"MongoDB"} />
-        <Icon source={"/data/icons/sql.png"} title={"Mysql"} />
-        <Icon source={"/data/icons/git.png"} title={"Git"} />
-        <Icon source={"/data/icons/github.png"} title={"Github"} />
-        <Icon source={"/data/icons/aws.png"} title={"AWS"} />
-        <Icon source={"/data/icons/letter-c.png"} title={"C"} />
-        <Icon source={"/data/icons/c++.png"} title={"C++"} />
-        <Icon source={"/data/icons/dsa.png"} title={"DSA"} />
+        <Icon source={"/companies/white-pearl.png"} title={"White Peart"} />
+        <Icon source={"/companies/wrenberg.png"} title={"Wrenberg"} />
       </div>
     </div>
   );
@@ -223,7 +192,9 @@ const Icon = ({ source, title }) => {
           width={1000}
           height={1000}
           id={id + "img"}
-          className="w-9/12 aspect-square object-contain"
+          className={`${(title == "Kidat"
+            ? "w-full"
+            : "w-11/12")} aspect-square object-contain`}
         />{" "}
       </div>
       <p className="md:hidden text-textGrey text-center mt-1">{title}</p>

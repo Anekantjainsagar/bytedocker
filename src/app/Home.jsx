@@ -46,8 +46,6 @@ const Home = () => {
       <Line />
       <Projects />
       <Line />
-      <Skills />
-      <Line />
       <Counters />
       <Footer />
     </div>

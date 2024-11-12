@@ -54,18 +54,11 @@ const Projects = () => {
         className="w-full mt-[25vw] md:mt-[8vw] px-5 md:px-[12vw]"
       >
         <h1 id="projectId" className="h1-text text-textGrey md:w-8/12">
-          {"Creating next level digital products".split("").map((e, i) => {
+          {"Delivering next-level digital solutions.".split("").map((e, i) => {
             return <span key={i}>{e}</span>;
           })}
         </h1>
       </div>
-      <Topbar
-        filter={filter}
-        setFilter={setFilter}
-        showType={showType}
-        setShowType={setShowType}
-        types={types}
-      />
       <MainBlock filter={filter} showType={showType} />
       <Footer />
     </div>

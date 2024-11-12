@@ -124,11 +124,9 @@ const Contact = () => {
           id="achieveIdText"
           className="h1-text text-textGrey px-5 md:px-[12vw] md:w-10/12"
         >
-          {"Get in Touch to Elevate Your Digital Experience"
-            .split("")
-            .map((e, i) => {
-              return <span key={i}>{e}</span>;
-            })}
+          {"Enhance Your Digital Experience with Us".split("").map((e, i) => {
+            return <span key={i}>{e}</span>;
+          })}
         </h1>
         <div className="mainLineContact h-[1px] mx-5 md:mx-[12vw] mx-auto bg-gray-400/50 mt-5 md:mt-16"></div>
         <div className="mx-auto w-[87vw] md:w-[50vw] mt-5 md:mt-12 overflow-hidden">
@@ -140,7 +138,7 @@ const Contact = () => {
               id="emailContact"
               className="px-4 border md:flex hidden items-center justify-center h-full border-textGrey rounded-t-md text-textGrey font-semibold border-b-0 w-fit"
             >
-              bytedocker@gmail.com
+              management@bytedocker.com
             </p>
             <div
               id="socialContact"
@@ -149,44 +147,17 @@ const Contact = () => {
               <AiFillLinkedin
                 onClick={(e) => {
                   e.preventDefault();
-                  window.open("https://www.linkedin.com/in/anekantjainsagar");
+                  window.open("https://www.linkedin.com/company/bytedocker/");
                 }}
                 className={`text-2xl md:text-3xl mx-1.5 md:mx-2 rounded-full cursor-pointer`}
               />
-              <AiFillGithub
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.open("https://github.com/Anekantjainsagar");
-                }}
-                className={`text-2xl md:text-3xl mx-1.5 md:mx-2 rounded-full cursor-pointer`}
-              />
+             
               <AiFillInstagram
                 onClick={(e) => {
                   e.preventDefault();
                   window.open(
-                    "https://instagram.com/ig.anekant?igshid=NTc4MTIwNjQ2YQ=="
+                    "https://www.instagram.com/bytedocker?igsh=b3J3d3BqNHF4NDVi"
                   );
-                }}
-                className={`text-2xl md:text-3xl mx-1.5 md:mx-2 rounded-full cursor-pointer`}
-              />
-              <AiFillYoutube
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.open("https://youtube.com/@ajlearning8494");
-                }}
-                className={`text-2xl md:text-3xl mx-1.5 md:mx-2 rounded-full cursor-pointer`}
-              />
-              <AiFillTwitterSquare
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.open("https://twitter.com/Anekant28446852");
-                }}
-                className={`text-2xl md:text-3xl mx-1.5 md:mx-2 rounded-full cursor-pointer`}
-              />
-              <AiFillFacebook
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.open("https://www.facebook.com/anekant.jain.338/");
                 }}
                 className={`text-2xl md:text-3xl mx-1.5 md:mx-2 rounded-full cursor-pointer`}
               />

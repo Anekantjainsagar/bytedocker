@@ -1,8 +1,9 @@
 import React, { useContext, useEffect, useRef } from "react";
 import gsap from "gsap";
 import LandingPage from "./Components/Sections/LandingPage";
-import About from "./Components/Sections/About";
+import SkillsHome from "./Components/Sections/SkillsHome";
 import Skills from "./Components/Sections/Skills";
+import About from "./Components/Sections/About";
 import { ScrollTrigger } from "gsap/all";
 import Line from "./Components/Utils/Line";
 import Projects from "./Components/Sections/Projects";
@@ -11,7 +12,6 @@ import Counters from "./Components/Sections/Counters";
 import Footer from "./Components/Utils/Footer";
 import useLocoScroll from "./scrollConfig";
 import { useLocation } from "react-router-dom";
-import SkillsHome from "./Components/Sections/SkillsHome";
 
 const Home = () => {
   gsap.registerPlugin(ScrollTrigger);

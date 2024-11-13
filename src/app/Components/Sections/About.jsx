@@ -127,7 +127,7 @@ const About = () => {
         <BallAnimation
           className="w-[23vw] md:w-[10vw] h-[23vw] md:h-[10vw]"
           ballSize={"w-[23vw] md:w-[10vw] h-[23vw] md:h-[10vw] md:text-2xl"}
-          text="About me"
+          text="About us"
           cnt={2}
           onClick={(e) => {
             context?.setScrollPosition(0);

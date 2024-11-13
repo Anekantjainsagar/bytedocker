@@ -40,8 +40,13 @@ const SkillsHome = () => {
   return (
     <div
       id="skillContainer2"
+      data-scroll-section
       className="py-[5vw] flex flex-col items-center px-5 md:px-[10vw]"
     >
+      {" "}
+      <h1 className="text-5xl text-newBlue font-semibold text-start md:w-[76vw] mb-10">
+        Our Clients
+      </h1>
       <div
         id="skillRow34"
         className="grid grid-cols-4 md:flex items-start md:items-center justify-between flex-wrap w-full mb-8 md:translate-x-[8vw] relative z-30"

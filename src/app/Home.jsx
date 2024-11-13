@@ -11,6 +11,7 @@ import Counters from "./Components/Sections/Counters";
 import Footer from "./Components/Utils/Footer";
 import useLocoScroll from "./scrollConfig";
 import { useLocation } from "react-router-dom";
+import SkillsHome from "./Components/Sections/SkillsHome";
 
 const Home = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -45,6 +46,8 @@ const Home = () => {
       <About />
       <Line />
       <Projects />
+      <Line />
+      <SkillsHome />
       <Line />
       <Counters />
       <Footer />

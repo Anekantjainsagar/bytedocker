@@ -109,34 +109,8 @@ const About = () => {
           className="w-full md:w-8/12 md:hidden text-xl md:text-4xl md:leading-[50px]"
           id="leftAboutSection"
         >
-          Skilled Full Stack Developer, SDE 1 at{" "}
-          <span
-            className="text-newBlue"
-            onClick={(e) => {
-              window.open("https://consciousleap.co");
-            }}
-          >
-            consciousleap
-          </span>
-          , Intern at
-          <span
-            className="text-newBlue ml-1"
-            onClick={(e) => {
-              window.open("https://prowiz.io");
-            }}
-          >
-            Prowiz Analytics
-          </span>
-          , Freelancer at{" "}
-          <span
-            className="text-newBlue"
-            onClick={(e) => {
-              window.open("https://trubuddies.com");
-            }}
-          >
-            Trubuddies
-          </span>
-          , Having 2 Years of Experience, Learning Machine Learning.
+          Welcome to Bytedocker, your trusted technology partner dedicated to
+          transforming businesses through powerful digital solutions.
         </h1>
         <p
           className="w-full md:text-base text-sm md:mt-0 mt-1 md:w-3/12"

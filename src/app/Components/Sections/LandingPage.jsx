@@ -96,7 +96,7 @@ const LandingPage = ({ location }) => {
           />
           <div>
             {[
-              "Custom Software Development",
+              "ERP & CRM",
               "Mobile and Web Application Development",
               "Marketing and Sales Enablement Tools",
               "Internally Developed SaaS Products",

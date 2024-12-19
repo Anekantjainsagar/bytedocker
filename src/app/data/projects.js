@@ -1,8 +1,6 @@
 const projects = [
   {
-    title: "ERP & CRM
-
-",
+    title: "ERP & CRM",
     desc: [
       "ERP Solutions: Tailored ERP systems for businesses to manage inventory, finance, and operations effectively.",
       "CRM Solutions: Advanced CRM systems, including lead management, sales tracking, and customer interaction tools.",

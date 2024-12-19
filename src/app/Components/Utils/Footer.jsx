@@ -333,7 +333,7 @@ const Footer = () => {
             width={1000}
             height={1000}
           />
-          <div className="absolute w-full h-full md:h-[95%] top-0 flex items-center justify-center gap-[25px] md:gap-[45px] ml-2 md:ml-4 z-10">
+          <div className="absolute w-full h-full md:h-[95%] top-0 flex items-center justify-center gap-[25px] min-[1300px]:gap-[35px] min-[1450px]:gap-[28px] min-[1550px]:gap-[30px] min-[1700px ]:gap-[45px] ml-2 md:ml-4 z-10">
             <div className="footer-avatar-eye footer-left-eye">
               <div className="footer-pupil footer-pupil-left"></div>
             </div>
